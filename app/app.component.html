@@ -1,0 +1,206 @@
+<!-- The header -->
+<div class="unfpa-header">
+  <div class="container">
+    <!-- As a heading -->
+    <nav class="navbar navbar-light bg-">
+      <button class="navbar-toggler hidden-md-up" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"></button>
+      <div class="collapse navbar-toggleable-sm" id="navbarResponsive">
+        <a class="navbar-brand" href="#">
+          <img alt="Brand" src="resources/images/UNFPA_logo.svg" height="100px">
+        </a>
+        <ul class="nav navbar-nav">
+        </ul>
+        <form class="form-inline float-md-right">
+          <small><a href="#" data-toggle="modal" data-target="#createProjectModal"><i class="fa fa-plus" aria-hidden="true"></i> Create Project</a></small>
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="Search" aria-describedby="basic-addon1">
+            <span class="input-group-addon" id="basic-addon1"><i class="fa fa-search" aria-hidden="true"></i></span>
+          </div>
+          <small><a href="#" data-toggle="modal" data-target="#advancedSearchModal">Advanced Search</a></small>
+        </form>
+      </div>
+    </nav>
+  </div>
+</div>
+<!-- The body -->
+<div class="unfpa-body">
+  <div class="container">
+    <router-outlet></router-outlet>
+  </div>
+</div>
+
+<!-- Advanced Search Modal -->
+<div class="modal fade" id="advancedSearchModal" tabindex="-1" role="dialog" aria-labelledby="advancedSearchModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <h4 class="modal-title" id="advancedSearchModalLabel">Advanced Search</h4>
+      </div>
+      <div class="modal-body">
+        <form>
+
+          <div class="form-group row">
+            <label class="col-sm-3" for="advSearchCountry">Country</label>
+            <div class="col-sm-9">
+              <select class="form-control" id="advSearchCountry">
+                <option>Any</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label class="col-sm-3" for="advSearchLanguage">Language</label>
+            <div class="col-sm-9">
+              <select class="form-control" id="advSearchLanguage">
+                <option>Any</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label class="col-sm-3" for="advSearchBudget">Budget</label>
+            <div class="col-sm-9">
+              <select class="form-control" id="advSearchBudget">
+                <option>Any</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label class="col-sm-3">Issues</label>
+            <div class="col-sm-9">
+              <div class="form-check">
+                <label class="form-check-label">
+                  <input class="form-check-input" type="checkbox"> Parenthood
+                </label>
+              </div>
+              <div class="form-check">
+                <label class="form-check-label">
+                  <input class="form-check-input" type="checkbox"> STDs
+                </label>
+              </div>
+              <div class="form-check">
+                <label class="form-check-label">
+                  <input class="form-check-input" type="checkbox"> Disaster
+                </label>
+              </div>
+              <div class="form-check">
+                <label class="form-check-label">
+                  <input class="form-check-input" type="checkbox"> Gender Issues
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label class="col-sm-3">WHO Participants</label>
+            <div class="col-sm-9">
+              <div class="form-check">
+                <label class="form-check-label">
+                  <input class="form-check-input" type="checkbox"> NGOs
+                </label>
+              </div>
+              <div class="form-check">
+                <label class="form-check-label">
+                  <input class="form-check-input" type="checkbox"> Private Sector
+                </label>
+              </div>
+              <div class="form-check">
+                <label class="form-check-label">
+                  <input class="form-check-input" type="checkbox"> Government
+                </label>
+              </div>
+              <div class="form-check">
+                <label class="form-check-label">
+                  <input class="form-check-input" type="checkbox"> Individuals
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label class="col-sm-3" for="advSearchTimeFrame">Time Frame</label>
+            <div class="col-sm-9">
+              <select class="form-control" id="advSearchTimeFrame">
+                <option>Short Term (< 1 year)</option>
+                <option>Long Term (>= 1 year)</option>
+                <option>Custom</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label class="col-sm-3">Field Oriented</label>
+            <div class="col-sm-9">
+              <div class="form-check">
+                <label class="form-check-label">
+                  <input class="form-check-input" type="checkbox"> Media
+                </label>
+              </div>
+              <div class="form-check">
+                <label class="form-check-label">
+                  <input class="form-check-input" type="checkbox"> Technology
+                </label>
+              </div>
+              <div class="form-check">
+                <label class="form-check-label">
+                  <input class="form-check-input" type="checkbox"> Astrology
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label class="col-sm-3">Current Situation</label>
+            <div class="col-sm-9">
+              <div class="form-check">
+                <label class="form-check-label">
+                  <input class="form-check-input" type="checkbox"> Funded
+                </label>
+              </div>
+              <div class="form-check">
+                <label class="form-check-label">
+                  <input class="form-check-input" type="checkbox"> Approved
+                </label>
+              </div>
+              <div class="form-check">
+                <label class="form-check-label">
+                  <input class="form-check-input" type="checkbox"> Rejected
+                </label>
+              </div>
+              <div class="form-check">
+                <label class="form-check-label">
+                  <input class="form-check-input" type="checkbox"> On Hold
+                </label>
+              </div>
+            </div>
+          </div>
+
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn-primary">Search</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Create Project Modal -->
+<unfpa-project-new></unfpa-project-new>
