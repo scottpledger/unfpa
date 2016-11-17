@@ -57,77 +57,35 @@
         <h4 class="modal-title" id="CheckListModalLabel">Project Checklist</h4>
       </div>
       <div class="modal-body">
-        <form>
+        <form ngNoForm>
 
           <div class="form-group row">
-            <div class="col-sm-9">
-              <div class="form-check">
+            <div class="col-sm-12">
+
+              <div class="form-check" *ngFor="let checklistItem of checklistItems">
                 <label class="form-check-label">
-                  <input class="form-check-input" type="checkbox"> Central America
+                  <input class="form-check-input" type="checkbox" [(ngModel)]="checklistItem.checked" (change)="updateScore()"> {{checklistItem.name}}
                 </label>
               </div>
-              <div class="form-check">
-                <label class="form-check-label">
-                  <input class="form-check-input" type="checkbox"> Public Health Care
-                </label>
-              </div>
-              <div class="form-check">
-                <label class="form-check-label">
-                  <input class="form-check-input" type="checkbox"> Natural Disasters
-                </label>
-              </div>
-              <div class="form-check">
-                <label class="form-check-label">
-                  <input class="form-check-input" type="checkbox"> Gender Inequality
-                </label>
-              </div>
-              <div class="form-check">
-                <label class="form-check-label">
-                  <input class="form-check-input" type="checkbox"> Patriarchal Society
-                </label>
-              </div>
-              <div class="form-check">
-                <label class="form-check-label">
-                  <input class="form-check-input" type="checkbox"> Access to Mobile Phones
-                </label>
-              </div>
-              <div class="form-check">
-                <label class="form-check-label">
-                  <input class="form-check-input" type="checkbox"> Wifi / Data
-                </label>
-              </div>
-              <div class="form-check">
-                <label class="form-check-label">
-                  <input class="form-check-input" type="checkbox"> Spanish / Local Language
-                </label>
-              </div>
-              <div class="form-check">
-                <label class="form-check-label">
-                  <input class="form-check-input" type="checkbox"> Budget / Funding $$$
-                </label>
-              </div>
-              <div class="form-check">
-                <label class="form-check-label">
-                  <input class="form-check-input" type="checkbox"> Government Support
-                </label>
-              </div>
-              <div class="form-check">
-                <label class="form-check-label">
-                  <input class="form-check-input" type="checkbox"> Coverage of App
-                </label>
-              </div>
-              <div class="form-check">
-                <label class="form-check-label">
-                  <input class="form-check-input" type="checkbox"> 
-                </label>
-              </div>
-              <div class="form-check">
-                <label class="form-check-label">
-                  <input class="form-check-input" type="checkbox"> 
-                </label>
-              </div>
+
+              <table class="table table-sm">
+                <thead>
+                <tr>
+                  <td></td><td>Strongly Disagree</td><td>Strongly Agree</td>
+                </tr>
+                </thead>
+                <tbody>
+                  <tr  *ngFor="let aspectItem of aspectItems">
+                  <th>{{aspectItem.name}}</th>
+                  <td colspan="2"><input type="range" min="-3" step="1" max="3" [(ngModel)]="aspectItem.multiplier"(change)="updateScore()" width="100%"></td>
+                  </tr>
+                </tbody>
+              </table>
+
             </div>
           </div>
+
+          <progress [ngClass]="{'progress':true, 'progress-success': score>=75, 'progress-warning': score<75 && score>=50, 'progress-danger': score<50 }" value="{{score}}" max="100"></progress>
         </form>
       </div>
       <div class="modal-footer">

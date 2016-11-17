@@ -12,13 +12,14 @@ export class ProjectFormat extends ProjectCategorizer {
 }
 
 export class ProjectChecklistItem {
-  checked: boolean;
-  name: string;
+  checked: boolean = false;
+  name: string = '';
 }
 
 export class ProjectAspectsItem {
-  relevance: number;
-  name: string;
+  relevance: number = 1;
+  name: string = '';
+  multiplier: number = 0;
 }
 
 export const ProjectStatus = {
