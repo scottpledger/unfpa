@@ -112,23 +112,28 @@ export const PROJECTS: Project[] = [
     aspects: [
       {
         relevance: 1,
-        name: 'Emulate reality TV'
+        name: 'Emulate reality TV',
+        multiplier: 0
       },
       {
         relevance: 1,
-        name: 'See celebrities as role models'
+        name: 'See celebrities as role models',
+        multiplier: 0
       },
       {
         relevance: 1,
-        name: 'Have a culture of watching TV'
+        name: 'Have a culture of watching TV',
+        multiplier: 0
       },
       {
         relevance: 3,
-        name: 'Lack male participation in parenting'
+        name: 'Lack male participation in parenting',
+        multiplier: 0
       },
       {
         relevance: 2,
-        name: 'Adhere to traditional gender roles'
+        name: 'Adhere to traditional gender roles',
+        multiplier: 0
       }
     ]
   },
