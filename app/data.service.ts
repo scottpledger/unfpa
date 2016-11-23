@@ -93,16 +93,16 @@ export const FORMATS: ProjectFormat[] = [
 ];
 
 export const PROJECTS: Project[] = [
-  {
-    id: 'frs',
-    imageSource: "resources/images/fathers_radio_show.jpg",
-    name: 'Fathers TV Show',
-    country: 'Georgia',
-    topics: [THEMES[2].topics[2], THEMES[2].topics[3], THEMES[2].topics[0]],
-    formats: [FORMATS[0]],
-    startDate: new Date(2015, 1, 5),
-    endDate: new Date(2016, 11, 08),
-    description: `
+  new Project(
+    'frs',
+    'Fathers TV Show',
+    "resources/images/fathers_radio_show.jpg",
+    'Georgia',
+    [THEMES[2].topics[2], THEMES[2].topics[3], THEMES[2].topics[0]],
+    [FORMATS[0]],
+    new Date(2015, 1, 5),
+    new Date(2016, 11, 08),
+    `
       This project is focused on improving gender inequality
       in Georgia. It is a reality TV show that features local
       celebrities who spend exclusive time parenting their
@@ -110,13 +110,13 @@ export const PROJECTS: Project[] = [
       broadcasting network to produce and broadcast this
       show on a local television channels.
     `,
-    contacts: "a@b.com",
-    budget: 10000,
-    languages: "Georgian",
-    partners: "WHO",
-    timeFrame: "soon",
-    status: "Awaiting Funding",
-    checklist: [
+    "a@b.com",
+    10000,
+    "Georgian",
+    "WHO",
+    "soon",
+    "Awaiting Funding",
+    [
       {
         checked: true,
         name: 'Access to TV'
@@ -150,7 +150,7 @@ export const PROJECTS: Project[] = [
         name: 'Health Care'
       }
     ],
-    aspects: [
+    [
       {
         relevance: 1,
         name: 'Emulate reality TV',
@@ -177,24 +177,24 @@ export const PROJECTS: Project[] = [
         multiplier: 0
       }
     ]
-  },
-  {
-    id: 'drb',
-    imageSource: "resources/images/Daddy_read_me_a_book.jpg",
-    name: 'Daddy, Read Me A Book! Campaign',
-    country: 'Georgia',
-    topics: [THEMES[2].topics[2], THEMES[2].topics[3], THEMES[2].topics[0]],
-    formats: [FORMATS[0]],
-    startDate: new Date(2015, 1, 5),
-    endDate: new Date(2016, 11, 08),
-    description: "A campaign to get fathers to interact more with their children by reading them books.",
-    contacts: "a@b.com",
-    budget: 10000,
-    languages: "Georgian",
-    partners: "WHO",
-    timeFrame: "soon",
-    status: "Currently Active",
-    checklist: [
+  ),
+  new Project(
+    'drb',
+    'Daddy, Read Me A Book! Campaign',
+    "resources/images/Daddy_read_me_a_book.jpg",
+    'Georgia',
+    [THEMES[2].topics[2], THEMES[2].topics[3], THEMES[2].topics[0]],
+    [FORMATS[0]],
+    new Date(2015, 1, 5),
+    new Date(2016, 11, 08),
+    "A campaign to get fathers to interact more with their children by reading them books.",
+    "a@b.com",
+    10000,
+    "Georgian",
+    "WHO",
+    "soon",
+    "Currently Active",
+    [
       {
         checked: true,
         name: 'Access to TV'
@@ -228,7 +228,7 @@ export const PROJECTS: Project[] = [
         name: 'Health Care'
       }
     ],
-    aspects: [
+    [
       {
         relevance: 1,
         name: 'Emulate reality TV',
@@ -255,24 +255,24 @@ export const PROJECTS: Project[] = [
         multiplier: 0
       }
     ]
-  },
-  {
-    id: 'gmc',
-    imageSource: "resources/images/Good_Men_Campaign.jpg",
-    name: 'Good Men Campaign',
-    country: 'Georgia',
-    topics: [THEMES[2].topics[0]],
-    formats: [FORMATS[0]],
-    startDate: new Date(2015, 1, 5),
-    endDate: new Date(2016, 11, 08),
-    description: "A campaign to get men to be more active in their communities.",
-    contacts: "a@b.com",
-    budget: 10000,
-    languages: "Georgian",
-    partners: "WHO",
-    timeFrame: "soon",
-    status: "Awaiting Funding",
-    checklist: [
+  ),
+  new Project(
+    'gmc',
+    'Good Men Campaign',
+    "resources/images/Good_Men_Campaign.jpg",
+    'Georgia',
+    [THEMES[2].topics[0]],
+    [FORMATS[0]],
+    new Date(2015, 1, 5),
+    new Date(2016, 11, 08),
+    "A campaign to get men to be more active in their communities.",
+    "a@b.com",
+    10000,
+    "Georgian",
+    "WHO",
+    "soon",
+    "Awaiting Funding",
+    [
       {
         checked: true,
         name: 'Access to TV'
@@ -306,7 +306,7 @@ export const PROJECTS: Project[] = [
         name: 'Health Care'
       }
     ],
-    aspects: [
+    [
       {
         relevance: 1,
         name: 'Emulate reality TV',
@@ -333,24 +333,24 @@ export const PROJECTS: Project[] = [
         multiplier: 0
       }
     ]
-  },
-  {
-    id: 'gima',
-    imageSource: "resources/images/Girls-in-martial-arts.jpg",
-    name: 'Girls in Martial Arts',
-    country: 'Tajikistan',
-    topics: [THEMES[2].topics[2], THEMES[2].topics[3], THEMES[1].topics[3]],
-    formats: [FORMATS[0]],
-    startDate: new Date(2015, 1, 5),
-    endDate: new Date(2016, 11, 08),
-    description: "A program that helps to teach girls how to defend themselves.",
-    contacts: "a@b.com",
-    budget: 10000,
-    languages: "Tajikistan",
-    partners: "WHO",
-    timeFrame: "soon",
-    status: "Awaiting Funding",
-    checklist: [
+  ),
+  new Project(
+    'gima',
+    'Girls in Martial Arts',
+    "resources/images/Girls-in-martial-arts.jpg",
+    'Tajikistan',
+    [THEMES[2].topics[2], THEMES[2].topics[3], THEMES[1].topics[3]],
+    [FORMATS[0]],
+    new Date(2015, 1, 5),
+    new Date(2016, 11, 08),
+    "A program that helps to teach girls how to defend themselves.",
+    "a@b.com",
+    10000,
+    "Tajikistan",
+    "WHO",
+    "soon",
+    "Awaiting Funding",
+    [
       {
         checked: true,
         name: 'Access to TV'
@@ -384,7 +384,7 @@ export const PROJECTS: Project[] = [
         name: 'Health Care'
       }
     ],
-    aspects: [
+    [
       {
         relevance: 1,
         name: 'Emulate reality TV',
@@ -411,24 +411,24 @@ export const PROJECTS: Project[] = [
         multiplier: 0
       }
     ]
-  },
-  {
-    id: 'mmw',
-    imageSource: "resources/images/Male_Midwives.jpg",
-    name: 'Male Midwives',
-    country: 'South Sudan',
-    topics: [THEMES[2].topics[0], THEMES[0].topics[3], THEMES[0].topics[2]],
-    formats: [FORMATS[0]],
-    startDate: new Date(2015, 1, 5),
-    endDate: new Date(2016, 11, 08),
-    description: "A program to get men more involved in the birthing process.",
-    contacts: "a@b.com",
-    budget: 10000,
-    languages: "Georgian",
-    partners: "WHO",
-    timeFrame: "soon",
-    status: "Awaiting Funding",
-    checklist: [
+  ),
+  new Project(
+    'mmw',
+    'Male Midwives',
+    "resources/images/Male_Midwives.jpg",
+    'South Sudan',
+    [THEMES[2].topics[0], THEMES[0].topics[3], THEMES[0].topics[2]],
+    [FORMATS[0]],
+    new Date(2015, 1, 5),
+    new Date(2016, 11, 08),
+    "A program to get men more involved in the birthing process.",
+    "a@b.com",
+    10000,
+    "Georgian",
+    "WHO",
+    "soon",
+    "Awaiting Funding",
+    [
       {
         checked: true,
         name: 'Access to TV'
@@ -462,7 +462,7 @@ export const PROJECTS: Project[] = [
         name: 'Health Care'
       }
     ],
-    aspects: [
+    [
       {
         relevance: 1,
         name: 'Emulate reality TV',
@@ -489,7 +489,7 @@ export const PROJECTS: Project[] = [
         multiplier: 0
       }
     ]
-  },
+  ),
 ];
 
 // Copied from http://country.io/names.json

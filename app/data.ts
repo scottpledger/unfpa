@@ -47,20 +47,29 @@ export const ProjectStatus = {
 }
 
 export class Project extends ProjectCategorizer {
-  country: string;
-  topics: string[];
-  formats: ProjectFormat[];
-  startDate: Date;
-  endDate: Date;
-  description: string;
-  contacts: string;
-  budget: number;
-  languages: string;
-  partners: string;
-  timeFrame: string;
-  status: string;
-  checklist: ProjectChecklistItem[] = new Array();
-  aspects: ProjectAspectsItem[] = new Array();
+  constructor(
+    id:string = '',
+    name:string = '',
+    imageSource: string = '',
+    public country: string = '',
+    public topics: string[] = [],
+    public formats: ProjectFormat[] = [],
+    public startDate: Date = null,
+    public endDate: Date = null,
+    public description: string = '',
+    public contacts: string = "",
+    public budget: number = 0,
+    public languages: string = "",
+    public partners: string = "",
+    public timeFrame: string = "",
+    public status: string = "",
+    public checklist: ProjectChecklistItem[] = [],
+    public aspects: ProjectAspectsItem[] = []) {
+    super();
+    this.id = id;
+    this.name = name;
+    this.imageSource = imageSource;
+  }
 
   compareTo(other: Project): number {
     var match = 0;
