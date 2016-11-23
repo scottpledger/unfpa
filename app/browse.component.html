@@ -1,6 +1,6 @@
 <div class="row">
   <a *ngFor="let cat of cats" [routerLink]="browseBase.concat([cat.id])">
-    <div class="col-sm-6 col-md-4">
+    <div class="col-sm-6">
       <div class="card">
         <div class="card-img-top">
           <img src="{{cat.imageSource}}" alt="Card image cap">

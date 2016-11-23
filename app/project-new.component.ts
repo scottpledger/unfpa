@@ -8,7 +8,7 @@ import { DataService }             from './data.service';
   selector: 'unfpa-project-new',
   templateUrl: 'project-new.component.html'
 })
-export class ProjectNewComponent {
+export class ProjectNewComponent implements OnInit {
   constructor(
     private dataService: DataService
   ) {}

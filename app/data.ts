@@ -1,4 +1,20 @@
 
+export class Country {
+  constructor(iso2: string, name: string) {
+    this.iso2 = iso2;
+    this.name = name;
+  }
+  iso2: string;
+  name: string;
+}
+
+export class Language {
+  name: string;
+  iso6392B: string;
+  iso6392T: string;
+  iso6391: string;
+}
+
 export class ProjectCategorizer {
   id: string;
   name: string;
@@ -6,6 +22,7 @@ export class ProjectCategorizer {
 }
 
 export class ProjectTheme extends ProjectCategorizer {
+  topics: string[]
 }
 
 export class ProjectFormat extends ProjectCategorizer {

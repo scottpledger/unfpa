@@ -43,14 +43,30 @@
         <form>
 
           <div class="form-group row">
+            <label class="col-sm-3" for="advSearchTopic">Topic</label>
+            <div class="col-sm-9">
+              <select class="form-control" id="advSearchTopic">
+                <option>Any</option>
+
+                <template ngFor let-theme [ngForOf]="themes">
+                  <optgroup label="{{theme.name}}">
+                    <option *ngFor="let topic of theme.topics" value="{{topic}}">
+                      {{topic}}
+                    </option>
+                  </optgroup>
+                </template>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group row">
             <label class="col-sm-3" for="advSearchCountry">Country</label>
             <div class="col-sm-9">
               <select class="form-control" id="advSearchCountry">
                 <option>Any</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
+                <option *ngFor="let country of countries" value="{{country.iso2}}">
+                      {{country.name}}
+                </option>
               </select>
             </div>
           </div>
@@ -60,10 +76,9 @@
             <div class="col-sm-9">
               <select class="form-control" id="advSearchLanguage">
                 <option>Any</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
+                <option *ngFor="let lang of languages" value="{{lang.iso6391}}">
+                      {{lang.name}}
+                </option>
               </select>
             </div>
           </div>
@@ -73,42 +88,26 @@
             <div class="col-sm-9">
               <select class="form-control" id="advSearchBudget">
                 <option>Any</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
+                <option>Small</option>
+                <option>Medium</option>
+                <option>Large</option>
               </select>
             </div>
           </div>
 
           <div class="form-group row">
-            <label class="col-sm-3">Issues</label>
+            <label class="col-sm-3" for="advSearchTimeFrame">Time Frame</label>
             <div class="col-sm-9">
-              <div class="form-check">
-                <label class="form-check-label">
-                  <input class="form-check-input" type="checkbox"> Parenthood
-                </label>
-              </div>
-              <div class="form-check">
-                <label class="form-check-label">
-                  <input class="form-check-input" type="checkbox"> STDs
-                </label>
-              </div>
-              <div class="form-check">
-                <label class="form-check-label">
-                  <input class="form-check-input" type="checkbox"> Disaster
-                </label>
-              </div>
-              <div class="form-check">
-                <label class="form-check-label">
-                  <input class="form-check-input" type="checkbox"> Gender Issues
-                </label>
-              </div>
+              <select class="form-control" id="advSearchTimeFrame">
+                <option>Short Term (< 1 year)</option>
+                <option>Long Term (>= 1 year)</option>
+                <option>Custom</option>
+              </select>
             </div>
           </div>
 
           <div class="form-group row">
-            <label class="col-sm-3">WHO Participants</label>
+            <label class="col-sm-3">Actors</label>
             <div class="col-sm-9">
               <div class="form-check">
                 <label class="form-check-label">
@@ -125,67 +124,30 @@
                   <input class="form-check-input" type="checkbox"> Government
                 </label>
               </div>
-              <div class="form-check">
-                <label class="form-check-label">
-                  <input class="form-check-input" type="checkbox"> Individuals
-                </label>
-              </div>
             </div>
           </div>
 
           <div class="form-group row">
-            <label class="col-sm-3" for="advSearchTimeFrame">Time Frame</label>
-            <div class="col-sm-9">
-              <select class="form-control" id="advSearchTimeFrame">
-                <option>Short Term (< 1 year)</option>
-                <option>Long Term (>= 1 year)</option>
-                <option>Custom</option>
-              </select>
-            </div>
-          </div>
-
-          <div class="form-group row">
-            <label class="col-sm-3">Field Oriented</label>
+            <label class="col-sm-3">Project Status</label>
             <div class="col-sm-9">
               <div class="form-check">
                 <label class="form-check-label">
-                  <input class="form-check-input" type="checkbox"> Media
+                  <input class="form-check-input" type="checkbox"> Awaiting Funding
                 </label>
               </div>
               <div class="form-check">
                 <label class="form-check-label">
-                  <input class="form-check-input" type="checkbox"> Technology
+                  <input class="form-check-input" type="checkbox"> Currently Active
                 </label>
               </div>
               <div class="form-check">
                 <label class="form-check-label">
-                  <input class="form-check-input" type="checkbox"> Astrology
-                </label>
-              </div>
-            </div>
-          </div>
-
-          <div class="form-group row">
-            <label class="col-sm-3">Current Situation</label>
-            <div class="col-sm-9">
-              <div class="form-check">
-                <label class="form-check-label">
-                  <input class="form-check-input" type="checkbox"> Funded
+                  <input class="form-check-input" type="checkbox"> Suspended
                 </label>
               </div>
               <div class="form-check">
                 <label class="form-check-label">
-                  <input class="form-check-input" type="checkbox"> Approved
-                </label>
-              </div>
-              <div class="form-check">
-                <label class="form-check-label">
-                  <input class="form-check-input" type="checkbox"> Rejected
-                </label>
-              </div>
-              <div class="form-check">
-                <label class="form-check-label">
-                  <input class="form-check-input" type="checkbox"> On Hold
+                  <input class="form-check-input" type="checkbox"> Completed
                 </label>
               </div>
             </div>
