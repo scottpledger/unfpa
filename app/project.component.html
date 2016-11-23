@@ -8,7 +8,7 @@
       <img src="{{project.imageSource}}" alt="Card image cap" style="max-width: 100%">
     </div>
 
-    <p class="lead">
+    <p>
       {{project.description}}
     </p>
   </div>
@@ -16,10 +16,10 @@
   <div class="col-md-6 col-lg-4">
     <dl class="row">
 
-      <dt class="col-sm-3">Theme(s)</dt>
+      <dt class="col-sm-3">Topic(s)</dt>
 
-      <dd *ngFor="let theme of project.themes; let first = first;"
-          [ngClass]="{'offset-sm-3': !first, 'col-sm-9': true}">{{theme.name}}</dd>
+      <dd *ngFor="let topic of project.topics; let first = first;"
+          [ngClass]="{'offset-sm-3': !first, 'col-sm-9': true}">{{topic}}</dd>
 
       <dt class="col-sm-3">Format(s)</dt>
 
@@ -28,23 +28,67 @@
 
       <dt class="col-sm-3">Location</dt>
       <dd class="col-sm-9">{{project.country}}</dd>
-
-      <dt class="col-sm-3">Since</dt>
-      <dd class="col-sm-9">{{project.initYear}}</dd>
-      <dt class="col-sm-3"><a href="#" data-toggle="modal" data-target="#ChecklistModal">Checklist</a></dt>
-      <dd class="col-sm-9">Next Step</dd>
     </dl>
-    <small><a href="#">Contact Georgia UNFPA Office</a></small>
-  </div>
 
-  <div class="col-md-6 col-lg-8">
-    <h6>Similar Projects</h6>
-    <ul>
-      <li>AAA ProjectName</li>
-    </ul>
+    <small><a data-toggle="collapse" href="#collapseAdditionalInfo" aria-expanded="false" aria-controls="collapseAdditionalInfo">Additional Info</a></small>
+    <div class="collapse" id="collapseAdditionalInfo">
+      <dl class="row">
+
+        <dt class="col-sm-3">Start Date</dt>
+        <dd class="col-sm-9">{{project.startDate}}</dd>
+
+        <dt class="col-sm-3">End Date</dt>
+        <dd class="col-sm-9">{{project.endDate}}</dd>
+
+        <dt class="col-sm-3">Budget</dt>
+        <dd class="col-sm-9">{{project.budget}}</dd>
+
+        <dt class="col-sm-3">Actors</dt>
+        <dd class="col-sm-9">{{project.partners}}</dd>
+
+        <dt class="col-sm-3">Time Frame</dt>
+        <dd class="col-sm-9">{{project.timeFrame}}</dd>
+
+        <dt class="col-sm-3">Status</dt>
+        <dd class="col-sm-9">{{project.status}}</dd>
+
+        <dt class="col-sm-3">Contacts</dt>
+        <dd class="col-sm-9">{{project.contacts}}</dd>
+      </dl>
+    </div>
+    <p>
+      <a href="#" data-toggle="modal" data-target="#ChecklistModal">Project Replication Checklist</a>
+    </p>
   </div>
 
 </div>
+
+<div class="row">
+  <h6>Similar Projects</h6><hr/>
+  <div class="card-deck-wrapper">
+    <div class="card-deck">
+      <a class="card card-small" *ngFor="let cat of similarProjects" [routerLink]="['/project', cat.id]">
+        <div class="card-img-top">
+          <img src="{{cat.imageSource}}" alt="Card image cap">
+        </div>
+        <div class="card-block">
+          <h6 class="card-title">{{cat.name}}</h6>
+          <small *ngIf="cat.country">{{cat.country}}</small>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
+
+<style>
+.card-small .card-img-top {
+  height: 100px;
+}
+
+.card-small .card-block {
+  padding: .5rem;
+}
+</style>
 
 <!-- Modal for checklist -->
 <div class="modal fade" id="ChecklistModal" tabindex="-1" role="dialog" aria-labelledby="CheckListModalLabel" aria-hidden="true" *ngIf="project">

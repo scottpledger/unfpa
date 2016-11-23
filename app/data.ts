@@ -48,7 +48,7 @@ export const ProjectStatus = {
 
 export class Project extends ProjectCategorizer {
   country: string;
-  themes: ProjectTheme[];
+  topics: string[];
   formats: ProjectFormat[];
   startDate: Date;
   endDate: Date;
@@ -61,4 +61,11 @@ export class Project extends ProjectCategorizer {
   status: string;
   checklist: ProjectChecklistItem[] = new Array();
   aspects: ProjectAspectsItem[] = new Array();
+
+  compareTo(other: Project): number {
+    var match = 0;
+    match += this.topics.filter(topic=>other.topics.includes(topic)).length;
+    match += this.formats.filter(format=>other.formats.includes(format)).length;
+    return match;
+  }
 }

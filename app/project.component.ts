@@ -29,11 +29,12 @@ export class ProjectComponent implements OnInit {
   }
 
   setProject(project: Project): void {
-    this.project = project
-    this.checklistItems = project.checklist.slice()
-    this.checklistItems.forEach((item: ProjectChecklistItem) => item.checked = false)
-    this.aspectItems = project.aspects.slice()
-    this.aspectItems.forEach((item: ProjectAspectsItem) => item.multiplier = 0)
+    this.project = project;
+    this.checklistItems = project.checklist.slice();
+    this.checklistItems.forEach((item: ProjectChecklistItem) => item.checked = false);
+    this.aspectItems = project.aspects.slice();
+    this.aspectItems.forEach((item: ProjectAspectsItem) => item.multiplier = 0);
+    this.dataService.getSimilarProjects(project).then(projects=>this.similarProjects = projects);
   }
 
   updateScore(): void {
@@ -52,6 +53,7 @@ export class ProjectComponent implements OnInit {
   }
 
   project: Project
+  similarProjects: Project[]
   checklistItems: ProjectChecklistItem[]
   aspectItems: ProjectAspectsItem[]
 

@@ -96,16 +96,335 @@ export const PROJECTS: Project[] = [
   {
     id: 'frs',
     imageSource: "resources/images/fathers_radio_show.jpg",
-    name: 'Fathers Radio Show',
+    name: 'Fathers TV Show',
     country: 'Georgia',
-    themes: [THEMES[0], THEMES[1]],
+    topics: [THEMES[2].topics[2], THEMES[2].topics[3], THEMES[2].topics[0]],
     formats: [FORMATS[0]],
     startDate: new Date(2015, 1, 5),
     endDate: new Date(2016, 11, 08),
-    description: "Do the thing",
+    description: `
+      This project is focused on improving gender inequality
+      in Georgia. It is a reality TV show that features local
+      celebrities who spend exclusive time parenting their
+      children. UNFPA Georgia partnered with a local
+      broadcasting network to produce and broadcast this
+      show on a local television channels.
+    `,
     contacts: "a@b.com",
     budget: 10000,
-    languages: "Gungan",
+    languages: "Georgian",
+    partners: "WHO",
+    timeFrame: "soon",
+    status: "Awaiting Funding",
+    checklist: [
+      {
+        checked: true,
+        name: 'Access to TV'
+      },
+      {
+        checked: false,
+        name: 'TV Broadcasting Network Partner'
+      },
+      {
+        checked: false,
+        name: 'Film Production Team'
+      },
+      {
+        checked: false,
+        name: 'Minimum 6 months (Implementation Period) '
+      },
+      {
+        checked: false,
+        name: 'Gender Expert on your Team'
+      },
+      {
+        checked: false,
+        name: 'Project Manager'
+      },
+      {
+        checked: false,
+        name: 'Government Support'
+      },
+      {
+        checked: false,
+        name: 'Health Care'
+      }
+    ],
+    aspects: [
+      {
+        relevance: 1,
+        name: 'Emulate reality TV',
+        multiplier: 0
+      },
+      {
+        relevance: 1,
+        name: 'See celebrities as role models',
+        multiplier: 0
+      },
+      {
+        relevance: 1,
+        name: 'Have a culture of watching TV',
+        multiplier: 0
+      },
+      {
+        relevance: 3,
+        name: 'Lack male participation in parenting',
+        multiplier: 0
+      },
+      {
+        relevance: 2,
+        name: 'Adhere to traditional gender roles',
+        multiplier: 0
+      }
+    ]
+  },
+  {
+    id: 'drb',
+    imageSource: "resources/images/Daddy_read_me_a_book.jpg",
+    name: 'Daddy, Read Me A Book! Campaign',
+    country: 'Georgia',
+    topics: [THEMES[2].topics[2], THEMES[2].topics[3], THEMES[2].topics[0]],
+    formats: [FORMATS[0]],
+    startDate: new Date(2015, 1, 5),
+    endDate: new Date(2016, 11, 08),
+    description: "A campaign to get fathers to interact more with their children by reading them books.",
+    contacts: "a@b.com",
+    budget: 10000,
+    languages: "Georgian",
+    partners: "WHO",
+    timeFrame: "soon",
+    status: "Currently Active",
+    checklist: [
+      {
+        checked: true,
+        name: 'Access to TV'
+      },
+      {
+        checked: false,
+        name: 'TV Broadcasting Network Partner'
+      },
+      {
+        checked: false,
+        name: 'Film Production Team'
+      },
+      {
+        checked: false,
+        name: 'Minimum 6 months (Implementation Period) '
+      },
+      {
+        checked: false,
+        name: 'Gender Expert on your Team'
+      },
+      {
+        checked: false,
+        name: 'Project Manager'
+      },
+      {
+        checked: false,
+        name: 'Government Support'
+      },
+      {
+        checked: false,
+        name: 'Health Care'
+      }
+    ],
+    aspects: [
+      {
+        relevance: 1,
+        name: 'Emulate reality TV',
+        multiplier: 0
+      },
+      {
+        relevance: 1,
+        name: 'See celebrities as role models',
+        multiplier: 0
+      },
+      {
+        relevance: 1,
+        name: 'Have a culture of watching TV',
+        multiplier: 0
+      },
+      {
+        relevance: 3,
+        name: 'Lack male participation in parenting',
+        multiplier: 0
+      },
+      {
+        relevance: 2,
+        name: 'Adhere to traditional gender roles',
+        multiplier: 0
+      }
+    ]
+  },
+  {
+    id: 'gmc',
+    imageSource: "resources/images/Good_Men_Campaign.jpg",
+    name: 'Good Men Campaign',
+    country: 'Georgia',
+    topics: [THEMES[2].topics[0]],
+    formats: [FORMATS[0]],
+    startDate: new Date(2015, 1, 5),
+    endDate: new Date(2016, 11, 08),
+    description: "A campaign to get men to be more active in their communities.",
+    contacts: "a@b.com",
+    budget: 10000,
+    languages: "Georgian",
+    partners: "WHO",
+    timeFrame: "soon",
+    status: "Awaiting Funding",
+    checklist: [
+      {
+        checked: true,
+        name: 'Access to TV'
+      },
+      {
+        checked: false,
+        name: 'TV Broadcasting Network Partner'
+      },
+      {
+        checked: false,
+        name: 'Film Production Team'
+      },
+      {
+        checked: false,
+        name: 'Minimum 6 months (Implementation Period) '
+      },
+      {
+        checked: false,
+        name: 'Gender Expert on your Team'
+      },
+      {
+        checked: false,
+        name: 'Project Manager'
+      },
+      {
+        checked: false,
+        name: 'Government Support'
+      },
+      {
+        checked: false,
+        name: 'Health Care'
+      }
+    ],
+    aspects: [
+      {
+        relevance: 1,
+        name: 'Emulate reality TV',
+        multiplier: 0
+      },
+      {
+        relevance: 1,
+        name: 'See celebrities as role models',
+        multiplier: 0
+      },
+      {
+        relevance: 1,
+        name: 'Have a culture of watching TV',
+        multiplier: 0
+      },
+      {
+        relevance: 3,
+        name: 'Lack male participation in parenting',
+        multiplier: 0
+      },
+      {
+        relevance: 2,
+        name: 'Adhere to traditional gender roles',
+        multiplier: 0
+      }
+    ]
+  },
+  {
+    id: 'gima',
+    imageSource: "resources/images/Girls-in-martial-arts.jpg",
+    name: 'Girls in Martial Arts',
+    country: 'Tajikistan',
+    topics: [THEMES[2].topics[2], THEMES[2].topics[3], THEMES[1].topics[3]],
+    formats: [FORMATS[0]],
+    startDate: new Date(2015, 1, 5),
+    endDate: new Date(2016, 11, 08),
+    description: "A program that helps to teach girls how to defend themselves.",
+    contacts: "a@b.com",
+    budget: 10000,
+    languages: "Tajikistan",
+    partners: "WHO",
+    timeFrame: "soon",
+    status: "Awaiting Funding",
+    checklist: [
+      {
+        checked: true,
+        name: 'Access to TV'
+      },
+      {
+        checked: false,
+        name: 'TV Broadcasting Network Partner'
+      },
+      {
+        checked: false,
+        name: 'Film Production Team'
+      },
+      {
+        checked: false,
+        name: 'Minimum 6 months (Implementation Period) '
+      },
+      {
+        checked: false,
+        name: 'Gender Expert on your Team'
+      },
+      {
+        checked: false,
+        name: 'Project Manager'
+      },
+      {
+        checked: false,
+        name: 'Government Support'
+      },
+      {
+        checked: false,
+        name: 'Health Care'
+      }
+    ],
+    aspects: [
+      {
+        relevance: 1,
+        name: 'Emulate reality TV',
+        multiplier: 0
+      },
+      {
+        relevance: 1,
+        name: 'See celebrities as role models',
+        multiplier: 0
+      },
+      {
+        relevance: 1,
+        name: 'Have a culture of watching TV',
+        multiplier: 0
+      },
+      {
+        relevance: 3,
+        name: 'Lack male participation in parenting',
+        multiplier: 0
+      },
+      {
+        relevance: 2,
+        name: 'Adhere to traditional gender roles',
+        multiplier: 0
+      }
+    ]
+  },
+  {
+    id: 'mmw',
+    imageSource: "resources/images/Male_Midwives.jpg",
+    name: 'Male Midwives',
+    country: 'South Sudan',
+    topics: [THEMES[2].topics[0], THEMES[0].topics[3], THEMES[0].topics[2]],
+    formats: [FORMATS[0]],
+    startDate: new Date(2015, 1, 5),
+    endDate: new Date(2016, 11, 08),
+    description: "A program to get men more involved in the birthing process.",
+    contacts: "a@b.com",
+    budget: 10000,
+    languages: "Georgian",
     partners: "WHO",
     timeFrame: "soon",
     status: "Awaiting Funding",
@@ -3111,11 +3430,19 @@ export class DataService {
   }
 
   getProjects(themeId: string, formatId: string): Promise<Project[]> {
-    return Promise.resolve(this.projects.filter((project: Project) => project.themes.map(theme=>theme.id).includes(themeId) && project.formats.map(format=>format.id).includes(formatId)));
+    return this.getThemes()
+    .then((themes) => 
+      themes.filter(theme => theme.id == themeId)[0] || null )
+    .then((theme: ProjectTheme) => theme==null? [] : Promise.resolve(
+      this.projects.filter((project)=> project.topics.filter(t => theme.topics.filter(t2 => t2==t).length > 0).length > 0 && project.formats.map(format=>format.id).includes(formatId))));
   }
 
   getProject(projectId: string): Promise<Project> {
     return Promise.resolve(this.projects.find((project: Project) => project.id == projectId));
+  }
+
+  getSimilarProjects(project: Project): Promise<Project[]> {
+    return Promise.resolve(this.projects.filter(p=>project.id != p.id && Project.prototype.compareTo.call(project, p)>0).sort((a , b) => Project.prototype.compareTo.call(project, a) - Project.prototype.compareTo.call(project, b)));
   }
 
   addProject(project: Project): void {
